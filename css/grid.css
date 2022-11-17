@@ -1,21 +1,74 @@
-body{
-    display: grid;
-    height: 150vh;
-    grid-template-rows: auto 1fr auto;
 
+
+
+.grid-container{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: repeat(5, 20%);
+    height: 100vh;
 }
-header{
-    background-color: pink;
-    text-align: center;
-    padding: 2em;
-}
-main{
+.grid-item{
     background-color: blue;
-    text-align: center;
-    padding: 2em;
+    font-size: 2em;
+    color: black;
+    padding: 20px;
+    border: 2px solid #fff;
 }
-footer{
-    background-color: yellow;
+.grid-item-1{
+    grid-column: span 2;
+}
+.grid-item-2{
+    grid-row: span 2;
+}
+.grid-item-5{
+    grid-row: span 2;
+}
+.grid-item-6{
+    grid-row: span 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.segment{
+    display: grid;
     text-align: center;
-    padding: 2em;
+    grid-template-rows: 100px;
+}
+.twelve{
+    background-color: pink;
+    grid-column: 1/ span 12;
+}
+.ten{
+    background-color: green;
+    grid-column: 2/12;
+}
+.two{
+    background-color: red;
+    grid-column: 2/4;
+}
+.five{
+    background-color: yellow;
+    grid-column: 4/9;
+}
+.eight{
+    background-color: blue;
+    grid-column: 1/9;
 }
